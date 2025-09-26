@@ -194,7 +194,7 @@ export default function Home() {
             <div className="relative">
               <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-8">
                 <img 
-                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src="https://aitech.edu.pk/wp-content/uploads/2025/04/picture-1.jpg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Students learning IT skills" 
                   className="w-full h-96 object-cover rounded-2xl shadow-lg"
                 />

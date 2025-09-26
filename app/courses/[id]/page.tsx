@@ -340,6 +340,10 @@ export default function CourseDetailPage() {
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       <span>Certificate upon completion</span>
                     </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      <span>Live classes with QnA Session</span>
+                    </div>
                   </div>
                   
                   <Button 

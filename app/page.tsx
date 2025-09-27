@@ -205,33 +205,38 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Why Choose <span className="text-[#ff4a03]">TECHINCEPTO</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We provide quality education with practical approach to help you succeed in the digital world.
+              We are committed to providing quality IT education that transforms careers and opens new opportunities in the digital world. Our approach combines theoretical knowledge with practical application to ensure you're job-ready.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 icon: Users, 
                 title: "Small Class Size", 
-                desc: "Maximum 25 students per class ensuring personalized attention and better learning outcomes." 
+                desc: "We maintain small class sizes with maximum 25 students per batch to ensure every student receives individual attention and personalized guidance throughout their learning journey." 
               },
               { 
                 icon: Award, 
-                title: "Industry-Relevant Curriculum", 
-                desc: "Courses designed to meet current market demands with practical projects and real-world applications." 
+                title: "Practical Training", 
+                desc: "Every course includes hands-on projects and real-world applications. You'll work on actual scenarios that mirror workplace challenges, building a portfolio while you learn." 
               },
               { 
                 icon: CheckCircle, 
-                title: "Hands-On Learning", 
-                desc: "Every course includes practical assignments and projects to build your portfolio and gain experience." 
+                title: "Live Assistance with Q&A Sessions", 
+                desc: "Get real-time support during classes with dedicated Q&A sessions. Our instructors are available to clarify doubts and provide additional guidance when needed." 
+              },
+              { 
+                icon: Briefcase, 
+                title: "Skills to Freelancing Journey", 
+                desc: "We don't just teach technical skills - we guide you on how to monetize them. Learn how to start your freelancing career and work with international clients." 
               }
             ].map((item, index) => (
               <div key={index} className="text-center p-6">
@@ -242,6 +247,33 @@ export default function Home() {
                 <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-16 bg-gradient-to-r from-orange-50 to-white rounded-2xl p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Teaching Methodology</h3>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                At TECHINCEPTO, we believe in learning by doing. Our structured approach ensures that you not only understand concepts but can apply them confidently in real-world situations.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">1</div>
+                <h4 className="font-semibold text-gray-900 mb-2">Learn</h4>
+                <p className="text-sm text-gray-600">Comprehensive theoretical foundation with industry best practices</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">2</div>
+                <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
+                <p className="text-sm text-gray-600">Hands-on exercises and real-world projects to reinforce learning</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">3</div>
+                <h4 className="font-semibold text-gray-900 mb-2">Apply</h4>
+                <p className="text-sm text-gray-600">Build portfolio projects and start your professional journey</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

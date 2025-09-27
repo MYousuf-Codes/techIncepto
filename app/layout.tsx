@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { MobileMenu } from '@/components/MobileMenu';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,10 +34,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://techincepto.com" />
         <meta name="theme-color" content="#FF6B35" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <MobileMenu />
+      </body>
     </html>
   );
 }

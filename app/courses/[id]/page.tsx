@@ -488,6 +488,56 @@ export default function CourseDetailPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Frequently Asked <span className="text-[#ff4a03]">Questions</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Here are some common questions about this course and our training methodology.
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-6">
+            {[
+              {
+                question: "What are the prerequisites for this course?",
+                answer: course.prerequisites + ". We provide additional support for beginners to ensure everyone can follow along comfortably."
+              },
+              {
+                question: "How are the classes conducted?",
+                answer: "Classes are conducted in small batches of maximum 25 students to ensure personalized attention. We use a combination of theoretical explanations, practical demonstrations, and hands-on exercises."
+              },
+              {
+                question: "Will I get a certificate after completion?",
+                answer: "Yes, you will receive a certificate of completion after successfully finishing all course requirements, including assignments and the final project."
+              },
+              {
+                question: "What if I miss a class?",
+                answer: "We provide recorded sessions for students who miss classes due to genuine reasons. Additionally, you can clarify doubts in the next session or through our support channels."
+              },
+              {
+                question: "Do you provide job placement assistance?",
+                answer: "While we don't guarantee job placement, we provide career guidance, resume building tips, and help you create a strong portfolio that showcases your skills to potential employers."
+              },
+              {
+                question: "Can I pay the course fee in installments?",
+                answer: "Yes, we offer flexible payment options. You can discuss installment plans during the enrollment process. Contact us via WhatsApp for more details."
+              }
+            ].map((faq, index) => (
+              <Card key={index} className="border-0 shadow-md">
+                <CardContent className="pt-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">

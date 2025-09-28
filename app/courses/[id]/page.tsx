@@ -209,7 +209,6 @@ const courses = [
       "Web Designer",
       "UI Developer",
       "Freelance Web Developer"
-    ]
     ],
     tools: ["HTML5", "CSS3", "JavaScript", "WordPress", "Bootstrap"],
     rating: 4.9,

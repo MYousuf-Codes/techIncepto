@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SocialLinks } from "@/components/SocialLinks";
+import { LazyImage } from "@/components/LazyImage";
 import { Code as Code2, Users, Award, CircleCheck as CheckCircle, Target, BookOpen, Lightbulb, Heart } from 'lucide-react';
 import Link from 'next/link';
 
@@ -83,7 +85,7 @@ export default function AboutPage() {
             </div>
             
             <div className="relative">
-              <img 
+              <LazyImage 
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="Students learning at TECHINCEPTO" 
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
@@ -319,6 +321,7 @@ export default function AboutPage() {
                 Professional IT training institute dedicated to providing quality education 
                 and practical skills for the digital world.
               </p>
+              <SocialLinks className="mb-4" />
               <div className="space-y-2 text-gray-400">
                 <p>Email: techincepto@gmail.com</p>
                 <p>WhatsApp: +92 310 7796560</p>

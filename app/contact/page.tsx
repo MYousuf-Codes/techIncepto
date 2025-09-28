@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Code as Code2, Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import Link from 'next/link';
 
@@ -350,6 +351,12 @@ Please provide me with more information about the admission process and availabl
                 Professional IT training institute dedicated to providing quality education 
                 and practical skills for the digital world.
               </p>
+              <SocialLinks className="mb-4" />
+              
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Follow Us</h3>
+                <SocialLinks showLabels={true} className="flex-wrap" />
+              </div>
               <div className="space-y-2 text-gray-400">
                 <p>Email: techincepto@gmail.com</p>
                 <p>WhatsApp: +92 310 7796560</p>

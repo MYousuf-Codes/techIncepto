@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Code as Code2 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -174,6 +175,7 @@ export default function PrivacyPolicyPage() {
                 Professional IT training institute dedicated to providing quality education 
                 and practical skills for the digital world.
               </p>
+              <SocialLinks className="mb-4" />
               <div className="space-y-2 text-gray-400">
                 <p>Email: techincepto@gmail.com</p>
                 <p>WhatsApp: +92 310 7796560</p>

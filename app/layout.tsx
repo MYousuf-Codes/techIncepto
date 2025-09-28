@@ -1,7 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import dynamic from 'next/dynamic';
 import { MobileMenu } from '@/components/MobileMenu';
+
+// Lazy load components that are not immediately needed
+const LazyMobileMenu = dynamic(() => import('@/components/MobileMenu').then(mod => ({ default: mod.MobileMenu })), {
+  ssr: false
+});
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,7 +49,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <MobileMenu />
+        <LazyMobileMenu />
       </body>
     </html>
   );

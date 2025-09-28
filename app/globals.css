@@ -78,5 +78,36 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Improve mobile scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .container {
+      @apply px-4;
+    }
+    
+    /* Improve touch targets */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better text readability on mobile */
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+  
+  /* Lazy loading optimization */
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  img[loading="lazy"].loaded {
+    opacity: 1;
   }
 }

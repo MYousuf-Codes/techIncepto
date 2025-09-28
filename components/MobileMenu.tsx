@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { SocialLinks } from "@/components/SocialLinks";
 import { Code as Code2, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -66,6 +67,10 @@ export function MobileMenu() {
             </nav>
             
             <div className="mt-8">
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-900 mb-3">Follow Us</h3>
+                <SocialLinks />
+              </div>
               <Button 
                 className="w-full bg-[#ff4a03] hover:bg-[#e63e02] text-white"
                 onClick={() => {

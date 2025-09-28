@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code as Code2, Palette, TrendingUp, Video, FileText, Briefcase, Clock, CircleCheck as CheckCircle, Users, ArrowLeft, BookOpen, Target } from 'lucide-react';
+import { SocialLinks } from "@/components/SocialLinks";
+import { Code as Code2, Palette, TrendingUp, Video, FileText, Briefcase, Clock, CircleCheck as CheckCircle, Users, ArrowLeft, BookOpen, Target, Star, Calendar, Award, Download, Play, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
@@ -40,7 +41,15 @@ const courses = [
       "Office Manager",
       "Executive Assistant",
       "Business Analyst"
-    ]
+    ],
+    tools: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Microsoft Outlook"],
+    rating: 4.8,
+    students: 150,
+    difficulty: "Easy",
+    language: "English/Urdu",
+    certificate: true,
+    support: "24/7 WhatsApp Support",
+    updates: "Lifetime Updates"
   },
   {
     id: 2,
@@ -74,7 +83,15 @@ const courses = [
       "Content Marketing Manager",
       "SEO Specialist",
       "Marketing Coordinator"
-    ]
+    ],
+    tools: ["Google Analytics", "Facebook Ads Manager", "Canva", "Mailchimp"],
+    rating: 4.9,
+    students: 200,
+    difficulty: "Medium",
+    language: "English/Urdu",
+    certificate: true,
+    support: "24/7 WhatsApp Support",
+    updates: "Lifetime Updates"
   },
   {
     id: 3,
@@ -108,7 +125,15 @@ const courses = [
       "Social Media Video Specialist",
       "YouTube Channel Manager",
       "Freelance Video Producer"
-    ]
+    ],
+    tools: ["Adobe Premiere Pro", "CapCut", "Filmora", "DaVinci Resolve"],
+    rating: 4.7,
+    students: 120,
+    difficulty: "Medium",
+    language: "English/Urdu",
+    certificate: true,
+    support: "24/7 WhatsApp Support",
+    updates: "Lifetime Updates"
   },
   {
     id: 4,
@@ -142,7 +167,15 @@ const courses = [
       "Social Media Designer",
       "Print Designer",
       "Freelance Designer"
-    ]
+    ],
+    tools: ["Adobe Photoshop", "Adobe Illustrator", "Canva Pro", "Figma"],
+    rating: 4.8,
+    students: 180,
+    difficulty: "Easy",
+    language: "English/Urdu",
+    certificate: true,
+    support: "24/7 WhatsApp Support",
+    updates: "Lifetime Updates"
   },
   {
     id: 5,
@@ -177,6 +210,15 @@ const courses = [
       "UI Developer",
       "Freelance Web Developer"
     ]
+    ],
+    tools: ["HTML5", "CSS3", "JavaScript", "WordPress", "Bootstrap"],
+    rating: 4.9,
+    students: 95,
+    difficulty: "Hard",
+    language: "English/Urdu",
+    certificate: true,
+    support: "24/7 WhatsApp Support",
+    updates: "Lifetime Updates"
   },
   {
     id: 6,
@@ -211,6 +253,15 @@ const courses = [
       "Digital Nomad",
       "Consultant"
     ]
+    ],
+    tools: ["Fiverr", "Upwork", "PayPal", "Payoneer"],
+    rating: 4.6,
+    students: 250,
+    difficulty: "Easy",
+    language: "English/Urdu",
+    certificate: true,
+    support: "24/7 WhatsApp Support",
+    updates: "Lifetime Updates"
   }
 ];
 
@@ -305,8 +356,31 @@ export default function CourseDetailPage() {
                   <Users className="h-5 w-5 mr-2" />
                   <span>Max 25 students</span>
                 </div>
+                <div className="flex items-center text-yellow-500">
+                  <Star className="h-5 w-5 mr-1 fill-current" />
+                  <span className="font-medium">{course.rating}</span>
+                </div>
                 <div className="flex items-center text-[#ff4a03] font-bold text-xl">
                   <span>Rs. {course.price.toLocaleString()}</span>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-lg">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-900">{course.students}+</div>
+                  <div className="text-sm text-gray-600">Students Enrolled</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-900">{course.difficulty}</div>
+                  <div className="text-sm text-gray-600">Difficulty Level</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-900">{course.language}</div>
+                  <div className="text-sm text-gray-600">Language</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-600">✓</div>
+                  <div className="text-sm text-gray-600">Certificate</div>
                 </div>
               </div>
             </div>
@@ -343,6 +417,14 @@ export default function CourseDetailPage() {
                     <div className="flex items-center">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       <span>Live classes with QnA Session</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      <span>24/7 WhatsApp support</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      <span>Lifetime course updates</span>
                     </div>
                   </div>
                   
@@ -397,6 +479,46 @@ export default function CourseDetailPage() {
               {/* Course Project */}
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Zap className="h-8 w-8 text-[#ff4a03] mr-3" />
+                  Tools & Technologies
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {course.tools.map((tool, index) => (
+                    <Card key={index} className="text-center hover:shadow-md transition-shadow">
+                      <CardContent className="pt-4">
+                        <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                          <Code2 className="h-6 w-6 text-[#ff4a03]" />
+                        </div>
+                        <p className="text-sm font-medium text-gray-700">{tool}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              {/* Course Features */}
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Course Features</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    { icon: Award, title: "Industry Certificate", desc: "Get a professional certificate upon successful completion" },
+                    { icon: Play, title: "Practical Projects", desc: "Work on real-world projects to build your portfolio" },
+                    { icon: Users, title: "Small Batches", desc: "Maximum 25 students for personalized attention" },
+                    { icon: Clock, title: "Flexible Timing", desc: "Multiple batch timings to fit your schedule" }
+                  ].map((feature, index) => (
+                    <Card key={index} className="flex items-start p-4 hover:shadow-md transition-shadow">
+                      <feature.icon className="h-8 w-8 text-[#ff4a03] mr-4 mt-1 flex-shrink-0" />
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                        <p className="text-gray-600 text-sm">{feature.desc}</p>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
                   <Target className="h-8 w-8 text-[#ff4a03] mr-3" />
                   Course Project
                 </h2>
@@ -438,6 +560,17 @@ export default function CourseDetailPage() {
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Course Info */}
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-emerald-50">
+                <CardContent className="pt-6 text-center">
+                  <div className="flex items-center justify-center mb-4">
+                    <Star className="h-8 w-8 text-yellow-500 fill-current" />
+                    <span className="text-3xl font-bold text-gray-900 ml-2">{course.rating}</span>
+                  </div>
+                  <p className="text-gray-600 mb-2">Course Rating</p>
+                  <p className="text-sm text-gray-500">{course.students}+ students enrolled</p>
+                </CardContent>
+              </Card>
+
               <Card className="border-0 shadow-lg">
                 <CardHeader>
                   <CardTitle>Course Information</CardTitle>
@@ -458,6 +591,14 @@ export default function CourseDetailPage() {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Price:</span>
                     <span className="font-bold text-[#ff4a03]">Rs. {course.price.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Language:</span>
+                    <span className="font-medium">{course.language}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Support:</span>
+                    <span className="font-medium text-green-600">24/7 WhatsApp</span>
                   </div>
                 </CardContent>
               </Card>
@@ -484,6 +625,61 @@ export default function CourseDetailPage() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Student Reviews Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              What Our <span className="text-[#ff4a03]">Students Say</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Real feedback from students who have completed this course and transformed their careers.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Ahmed Khan",
+                role: "Freelancer",
+                rating: 5,
+                review: "Excellent course! The practical approach helped me start my freelancing career immediately after completion."
+              },
+              {
+                name: "Fatima Ali",
+                role: "Marketing Executive",
+                rating: 5,
+                review: "The instructors are very knowledgeable and the small class size ensured I got personal attention."
+              },
+              {
+                name: "Hassan Sheikh",
+                role: "Business Owner",
+                rating: 4,
+                review: "Great value for money. The skills I learned have directly improved my business operations."
+              }
+            ].map((review, index) => (
+              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`h-4 w-4 ${i < review.rating ? 'text-yellow-500 fill-current' : 'text-gray-300'}`} 
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">"{review.review}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{review.name}</p>
+                    <p className="text-sm text-gray-500">{review.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -553,6 +749,7 @@ export default function CourseDetailPage() {
                 Professional IT training institute dedicated to providing quality education 
                 and practical skills for the digital world.
               </p>
+              <SocialLinks className="mb-4" />
               <div className="space-y-2 text-gray-400">
                 <p>Email: techincepto@gmail.com</p>
                 <p>WhatsApp: +92 310 7796560</p>

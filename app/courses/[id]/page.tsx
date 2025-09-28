@@ -251,7 +251,6 @@ const courses = [
       "Online Service Provider",
       "Digital Nomad",
       "Consultant"
-    ]
     ],
     tools: ["Fiverr", "Upwork", "PayPal", "Payoneer"],
     rating: 4.6,

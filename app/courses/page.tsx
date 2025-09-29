@@ -198,9 +198,9 @@ export default function CoursesPage() {
             Our <span className="text-[#ff4a03]">IT Training Courses</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Comprehensive IT training programs designed to give you practical skills and knowledge 
-            needed to succeed in today's digital economy. Each course is limited to 25 students 
-            to ensure personalized attention and quality learning.
+            Comprehensive online IT courses in Pakistan designed to give you practical skills and knowledge 
+            needed to succeed in today's digital economy. Learn computer courses, digital marketing, and web development 
+            with personalized attention in small batches of maximum 25 students.
           </p>
           <div className="flex items-center justify-center space-x-8">
             <div className="text-center">
@@ -281,7 +281,11 @@ export default function CoursesPage() {
                       </Link>
                       <Button 
                         className="flex-1 bg-[#ff4a03] hover:bg-[#e63e02] text-white"
-                        onClick={handleEnrollClick}
+                        onClick={() => {
+                          const message = `Hi! I'm interested in enrolling in the ${course.title} course at TECHINCEPTO. Can you please provide me with more information about the admission process, batch timings, and payment details?`;
+                          const whatsappUrl = `https://wa.me/923107796560?text=${encodeURIComponent(message)}`;
+                          window.open(whatsappUrl, '_blank');
+                        }}
                       >
                         Enroll Now
                       </Button>
@@ -302,8 +306,8 @@ export default function CoursesPage() {
               Why Choose Our <span className="text-[#ff4a03]">Training Programs</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our courses are designed with a practical approach to ensure you gain real-world skills 
-              that are immediately applicable in your career.
+              Our online IT courses in Pakistan are designed with a practical approach to ensure you gain real-world skills 
+              that are immediately applicable in your career. Learn computer skills and digital marketing from home.
             </p>
           </div>
           
@@ -343,8 +347,8 @@ export default function CoursesPage() {
             Ready to Start Learning?
           </h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Don't wait - seats are limited to 25 students per class. Secure your spot today 
-            and start building the skills you need for a successful career in IT.
+            Don't wait - seats are limited to 25 students per class. Secure your spot today in our online IT courses in Pakistan
+            and start building the skills you need for a successful career in IT and digital marketing.
           </p>
           <Button 
             size="lg" 

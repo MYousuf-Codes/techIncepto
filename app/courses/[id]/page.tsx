@@ -44,7 +44,6 @@ const courses = [
     ],
     tools: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Microsoft Outlook"],
     rating: 4.8,
-    students: 150,
     difficulty: "Easy",
     language: "English/Urdu",
     certificate: true,
@@ -85,8 +84,6 @@ const courses = [
       "Marketing Coordinator"
     ],
     tools: ["Google Analytics", "Facebook Ads Manager", "Canva", "Mailchimp"],
-    rating: 4.9,
-    students: 200,
     difficulty: "Medium",
     language: "English/Urdu",
     certificate: true,
@@ -127,8 +124,6 @@ const courses = [
       "Freelance Video Producer"
     ],
     tools: ["Adobe Premiere Pro", "CapCut", "Filmora", "DaVinci Resolve"],
-    rating: 4.7,
-    students: 120,
     difficulty: "Medium",
     language: "English/Urdu",
     certificate: true,
@@ -169,8 +164,6 @@ const courses = [
       "Freelance Designer"
     ],
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Canva Pro", "Figma"],
-    rating: 4.8,
-    students: 180,
     difficulty: "Easy",
     language: "English/Urdu",
     certificate: true,
@@ -211,8 +204,6 @@ const courses = [
       "Freelance Web Developer"
     ],
     tools: ["HTML5", "CSS3", "JavaScript", "WordPress", "Bootstrap"],
-    rating: 4.9,
-    students: 95,
     difficulty: "Hard",
     language: "English/Urdu",
     certificate: true,
@@ -253,8 +244,6 @@ const courses = [
       "Consultant"
     ],
     tools: ["Fiverr", "Upwork", "PayPal", "Payoneer"],
-    rating: 4.6,
-    students: 250,
     difficulty: "Easy",
     language: "English/Urdu",
     certificate: true,
@@ -354,20 +343,12 @@ export default function CourseDetailPage() {
                   <Users className="h-5 w-5 mr-2" />
                   <span>Max 25 students</span>
                 </div>
-                <div className="flex items-center text-yellow-500">
-                  <Star className="h-5 w-5 mr-1 fill-current" />
-                  <span className="font-medium">{course.rating}</span>
-                </div>
                 <div className="flex items-center text-[#ff4a03] font-bold text-xl">
                   <span>Rs. {course.price.toLocaleString()}</span>
                 </div>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 p-4 bg-gray-50 rounded-lg">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-gray-900">{course.students}+</div>
-                  <div className="text-sm text-gray-600">Students Enrolled</div>
-                </div>
                 <div className="text-center">
                   <div className="text-lg font-bold text-gray-900">{course.difficulty}</div>
                   <div className="text-sm text-gray-600">Difficulty Level</div>
@@ -379,6 +360,10 @@ export default function CourseDetailPage() {
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-600">✓</div>
                   <div className="text-sm text-gray-600">Certificate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-900">25</div>
+                  <div className="text-sm text-gray-600">Max Students</div>
                 </div>
               </div>
             </div>
@@ -561,11 +546,10 @@ export default function CourseDetailPage() {
               <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-emerald-50">
                 <CardContent className="pt-6 text-center">
                   <div className="flex items-center justify-center mb-4">
-                    <Star className="h-8 w-8 text-yellow-500 fill-current" />
-                    <span className="text-3xl font-bold text-gray-900 ml-2">{course.rating}</span>
+                    <Award className="h-8 w-8 text-green-500" />
                   </div>
-                  <p className="text-gray-600 mb-2">Course Rating</p>
-                  <p className="text-sm text-gray-500">{course.students}+ students enrolled</p>
+                  <p className="text-gray-600 mb-2">Quality Training</p>
+                  <p className="text-sm text-gray-500">Professional Certificate</p>
                 </CardContent>
               </Card>
 
@@ -628,59 +612,6 @@ export default function CourseDetailPage() {
       </section>
 
       {/* Student Reviews Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              What Our <span className="text-[#ff4a03]">Students Say</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Real feedback from students who have completed this course and transformed their careers.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "Ahmed Khan",
-                role: "Freelancer",
-                rating: 5,
-                review: "Excellent course! The practical approach helped me start my freelancing career immediately after completion."
-              },
-              {
-                name: "Fatima Ali",
-                role: "Marketing Executive",
-                rating: 5,
-                review: "The instructors are very knowledgeable and the small class size ensured I got personal attention."
-              },
-              {
-                name: "Hassan Sheikh",
-                role: "Business Owner",
-                rating: 4,
-                review: "Great value for money. The skills I learned have directly improved my business operations."
-              }
-            ].map((review, index) => (
-              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`h-4 w-4 ${i < review.rating ? 'text-yellow-500 fill-current' : 'text-gray-300'}`} 
-                      />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-4 italic">"{review.review}"</p>
-                  <div>
-                    <p className="font-semibold text-gray-900">{review.name}</p>
-                    <p className="text-sm text-gray-500">{review.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">

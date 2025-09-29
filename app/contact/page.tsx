@@ -87,8 +87,8 @@ Please provide me with more information about the admission process and availabl
             Get in <span className="text-[#ff4a03]">Touch</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Ready to start your learning journey? We're here to help you choose the right course 
-            and answer any questions you may have about our IT training programs.
+            Ready to start your learning journey with online IT courses in Pakistan? We're here to help you choose the right course 
+            and answer any questions you may have about our computer training programs.
           </p>
         </div>
       </section>
@@ -106,7 +106,7 @@ Please provide me with more information about the admission process and availabl
                     Send us a Message
                   </CardTitle>
                   <p className="text-gray-600">
-                    Fill out the form below and we'll get back to you as soon as possible. 
+                    Fill out the form below and we'll get back to you as soon as possible for our online IT courses in Pakistan. 
                     You can also contact us directly via WhatsApp for immediate assistance.
                   </p>
                 </CardHeader>
@@ -205,7 +205,7 @@ Please provide me with more information about the admission process and availabl
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  We're here to help you succeed in your IT career. Reach out to us through any 
+                  We're here to help you succeed in your IT career with our online courses in Pakistan. Reach out to us through any 
                   of the following channels and we'll be happy to assist you.
                 </p>
               </div>
@@ -269,7 +269,7 @@ Please provide me with more information about the admission process and availabl
                 </CardHeader>
                 <CardContent>
                   <p className="text-orange-100 mb-4">
-                    For immediate assistance with course selection, admission process, or any urgent queries, 
+                    For immediate assistance with our online IT courses selection, admission process, or any urgent queries, 
                     contact us directly on WhatsApp.
                   </p>
                   <Button 
@@ -294,7 +294,7 @@ Please provide me with more information about the admission process and availabl
               Frequently Asked <span className="text-[#ff4a03]">Questions</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Here are some common questions about our courses and admission process.
+              Here are some common questions about our online IT courses in Pakistan and admission process.
             </p>
           </div>
           
@@ -302,19 +302,19 @@ Please provide me with more information about the admission process and availabl
             {[
               {
                 question: "How do I enroll in a course?",
-                answer: "You can enroll by contacting us via WhatsApp at +92 310 7796560 or by filling out the contact form above. We'll guide you through the admission process and help you choose the right course."
+                answer: "You can enroll in our online IT courses by contacting us via WhatsApp at +92 310 7796560 or by filling out the contact form above. We'll guide you through the admission process and help you choose the right course."
               },
               {
                 question: "What is the class size?",
-                answer: "We maintain small class sizes with a maximum of 25 students per class to ensure personalized attention and better learning outcomes for every student."
+                answer: "As a new institute, we maintain small class sizes with a maximum of 25 students per class to ensure personalized attention and better learning outcomes for every student."
               },
               {
                 question: "Do you provide certificates?",
-                answer: "Yes, we provide certificates of completion for all our courses. These certificates validate the skills and knowledge you've gained during the training program."
+                answer: "Yes, we provide certificates of completion for all our online IT courses. These certificates validate the skills and knowledge you've gained during the training program."
               },
               {
                 question: "Are there any prerequisites?",
-                answer: "Most of our courses are designed for beginners and don't require specific prerequisites. However, basic computer knowledge is helpful. We'll discuss your background during the consultation."
+                answer: "Most of our online IT courses are designed for beginners and don't require specific prerequisites. However, basic computer knowledge is helpful. We'll discuss your background during the consultation."
               },
               {
                 question: "What are the payment options?",
@@ -322,7 +322,7 @@ Please provide me with more information about the admission process and availabl
               },
               {
                 question: "Do you offer job placement assistance?",
-                answer: "While we don't guarantee job placement, we provide career guidance, resume building tips, and help you build a strong portfolio that showcases your skills to potential employers."
+                answer: "As a new institute, while we don't guarantee job placement, we provide career guidance, resume building tips, and help you build a strong portfolio that showcases your skills to potential employers."
               }
             ].map((faq, index) => (
               <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">

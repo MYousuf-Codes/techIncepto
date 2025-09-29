@@ -51,8 +51,8 @@ export default function AboutPage() {
             About <span className="text-[#ff4a03]">TECHINCEPTO</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            We are a dedicated IT training institute committed to empowering individuals with 
-            practical digital skills that open doors to new career opportunities in today's 
+            We are a new and dedicated IT training institute committed to empowering individuals with 
+            practical digital skills through online IT courses in Pakistan that open doors to new career opportunities in today's 
             technology-driven world.
           </p>
         </div>
@@ -66,18 +66,18 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  TECHINCEPTO was founded with a simple yet powerful vision: to bridge the gap 
+                  TECHINCEPTO was recently founded with a simple yet powerful vision: to bridge the gap 
                   between traditional education and the practical skills needed in today's digital economy. 
-                  We recognized that many talented individuals were struggling to find quality, 
-                  affordable IT training that actually prepares them for real-world challenges.
+                  We recognize that many talented individuals are struggling to find quality, 
+                  affordable online IT courses in Pakistan that actually prepare them for real-world challenges.
                 </p>
                 <p>
-                  Our institute focuses on hands-on learning with small class sizes to ensure every 
+                  Our new institute focuses on hands-on learning with small class sizes to ensure every 
                   student receives personalized attention. We believe that learning should be practical, 
                   engaging, and directly applicable to your career goals.
                 </p>
                 <p>
-                  Today, we offer comprehensive training programs in various IT domains, from basic 
+                  We offer comprehensive online training programs in various IT domains, from basic 
                   computer skills to advanced web development, all designed to help our students 
                   succeed in the digital world.
                 </p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  To provide high-quality, practical IT education that empowers individuals with 
+                  To provide high-quality, practical online IT education in Pakistan that empowers individuals with 
                   the skills and confidence needed to succeed in the digital economy. We are 
                   committed to making technology education accessible, affordable, and relevant 
                   to current industry needs.
@@ -125,10 +125,10 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-center">
-                  To become the leading IT training institute that transforms lives through 
+                  To become a leading IT training institute in Pakistan that transforms lives through 
                   education, creating a skilled workforce ready for the challenges of tomorrow's 
                   digital landscape. We envision a future where everyone has access to quality 
-                  technology education.
+                  online technology education.
                 </p>
               </CardContent>
             </Card>
@@ -260,18 +260,18 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                At TECHINCEPTO, we understand that choosing the right training institute is a significant 
+                At TECHINCEPTO, we understand that choosing the right online IT training institute is a significant 
                 decision that can impact your career trajectory. That's why we are committed to providing 
                 not just education, but a transformative learning experience.
               </p>
               <p>
-                We believe that every student has the potential to succeed in the IT industry, regardless 
+                As a new institute, we believe that every student has the potential to succeed in the IT industry, regardless 
                 of their background or previous experience. Our role is to provide the guidance, support, 
                 and practical skills needed to unlock that potential.
               </p>
               <p>
                 When you choose TECHINCEPTO, you're not just enrolling in a course - you're joining a 
-                community of learners and professionals who are committed to growth, excellence, and 
+                new community of learners and professionals who are committed to growth, excellence, and 
                 mutual success in the digital world.
               </p>
             </div>

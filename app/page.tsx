@@ -156,8 +156,8 @@ export default function Home() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Transform your career with practical IT training designed for today's digital world. 
-                Learn from industry professionals and gain hands-on experience with real projects.
+                Transform your career with practical online IT courses in Pakistan designed for today's digital world. 
+                Learn computer courses online, digital marketing, web development, and freelancing skills from industry professionals.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -214,8 +214,9 @@ export default function Home() {
               Our <span className="text-[#ff4a03]">IT Courses</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our comprehensive range of courses designed to give you practical skills 
-              and knowledge needed to succeed in today's digital economy.
+              Choose from our comprehensive range of online IT courses in Pakistan designed to give you practical skills 
+              and knowledge needed to succeed in today's digital economy. Learn computer skills, digital marketing, 
+              graphic design, and web development from home.
             </p>
           </div>
           
@@ -273,7 +274,11 @@ export default function Home() {
                       </Link>
                       <Button 
                         className="flex-1 bg-[#ff4a03] hover:bg-[#e63e02] text-white"
-                        onClick={handleEnrollClick}
+                        onClick={() => {
+                          const message = `Hi! I'm interested in enrolling in the ${course.title} course at TECHINCEPTO. Can you please provide me with more information about the admission process, batch timings, and payment details?`;
+                          const whatsappUrl = `https://wa.me/923107796560?text=${encodeURIComponent(message)}`;
+                          window.open(whatsappUrl, '_blank');
+                        }}
                       >
                         Enroll Now
                       </Button>
@@ -303,7 +308,7 @@ export default function Home() {
               Why Choose <span className="text-[#ff4a03]">TECHINCEPTO</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We are committed to providing quality IT education that transforms careers and opens new opportunities in the digital world. Our approach combines theoretical knowledge with practical application to ensure you're job-ready.
+              We are committed to providing quality online IT education in Pakistan that transforms careers and opens new opportunities in the digital world. Our approach combines theoretical knowledge with practical application to ensure you're job-ready.
             </p>
           </div>
           
@@ -344,7 +349,7 @@ export default function Home() {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Teaching Methodology</h3>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                At TECHINCEPTO, we believe in learning by doing. Our structured approach ensures that you not only understand concepts but can apply them confidently in real-world situations.
+                At TECHINCEPTO, we believe in learning by doing with our online IT courses in Pakistan. Our structured approach ensures that you not only understand concepts but can apply them confidently in real-world situations.
               </p>
             </div>
             
@@ -376,8 +381,8 @@ export default function Home() {
             Ready to Start Your Learning Journey?
           </h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Join TECHINCEPTO today and gain the digital skills you need to succeed. 
-            Limited seats available - only 25 students per class.
+            Join TECHINCEPTO today and gain the digital skills you need to succeed with our online IT courses in Pakistan. 
+            Start your journey in computer courses, digital marketing, and web development. Limited seats available - only 25 students per class.
           </p>
           <Button 
             size="lg" 

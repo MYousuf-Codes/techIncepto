@@ -12,23 +12,23 @@ const LazyMobileMenu = dynamic(() => import('@/components/MobileMenu').then(mod 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'TECHINCEPTO - Professional IT Training Institute | Learn Digital Skills',
-  description: 'Master digital skills with TECHINCEPTO\'s practical IT courses. From MS Office to Web Development, we offer hands-on training with small class sizes (max 25 students). Quality education for career growth.',
-  keywords: 'IT training, computer courses, digital marketing, graphic design, web development, freelancing, MS Office, video editing, Pakistan, career development, practical training',
+  title: 'TECHINCEPTO - Online IT Courses in Pakistan | Computer Training Institute',
+  description: 'Learn online IT courses in Pakistan with TECHINCEPTO. Master computer courses, digital marketing, web development, graphic design, and freelancing skills. Practical training with small class sizes for career growth.',
+  keywords: 'online IT courses Pakistan, computer courses online, digital marketing course Pakistan, web development training, graphic design course, freelancing skills, MS Office training, video editing course, IT training institute Pakistan, online computer classes',
   authors: [{ name: 'TECHINCEPTO' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
-    title: 'TECHINCEPTO - Professional IT Training Institute',
-    description: 'Master digital skills with practical IT courses. Small class sizes, hands-on training, and quality education.',
+    title: 'TECHINCEPTO - Online IT Courses in Pakistan',
+    description: 'Learn online IT courses in Pakistan. Master computer skills, digital marketing, web development with practical training.',
     type: 'website',
     locale: 'en_US',
     siteName: 'TECHINCEPTO',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TECHINCEPTO - Professional IT Training Institute',
-    description: 'Master digital skills with practical IT courses. Small class sizes, hands-on training, and quality education.',
+    title: 'TECHINCEPTO - Online IT Courses in Pakistan',
+    description: 'Learn online IT courses in Pakistan. Master computer skills, digital marketing, web development with practical training.',
   }
 };
 

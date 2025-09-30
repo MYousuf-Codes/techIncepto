@@ -139,11 +139,11 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-orange-50 to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-white to-orange-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-[#ff4a03] text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-600 text-sm font-medium">
                 <Award className="h-4 w-4 mr-2" />
                 Professional IT Training Institute
               </div>
@@ -194,10 +194,10 @@ export default function Home() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl p-8">
-                <LazyImage 
-                  src="https://aitech.edu.pk/wp-content/uploads/2025/04/picture-1.jpg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Students learning IT skills" 
+              <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl p-8">
+                <LazyImage
+                  src="https://aitech.edu.pk/wp-content/uploads/2025/04/picture-1.jpg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Students learning IT skills"
                   className="w-full h-96 object-cover rounded-2xl shadow-lg"
                 />
               </div>
@@ -207,11 +207,11 @@ export default function Home() {
       </section>
 
       {/* Courses Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Our <span className="text-[#ff4a03]">IT Courses</span>
+              Our <span className="bg-gradient-to-r from-[#ff4a03] to-blue-600 bg-clip-text text-transparent">IT Courses</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose from our comprehensive range of online IT courses in Pakistan designed to give you practical skills 
@@ -225,15 +225,15 @@ export default function Home() {
               <Card key={course.id} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white relative overflow-hidden">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-[#ff4a03] transition-colors">
-                      <course.icon className="h-6 w-6 text-[#ff4a03] group-hover:text-white transition-colors" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-orange-100 rounded-xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#ff4a03] group-hover:to-blue-600 transition-all">
+                      <course.icon className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
                     </div>
-                    <Badge variant="outline" className="text-xs">
+                    <Badge variant="outline" className="text-xs border-blue-200 text-blue-600">
                       {course.level}
                     </Badge>
                   </div>
                   
-                  <CardTitle className="text-xl mb-2 group-hover:text-[#ff4a03] transition-colors">
+                  <CardTitle className="text-xl mb-2 group-hover:bg-gradient-to-r group-hover:from-[#ff4a03] group-hover:to-blue-600 group-hover:bg-clip-text group-hover:text-transparent transition-all">
                     {course.title}
                   </CardTitle>
                   
@@ -301,11 +301,11 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-[#ff4a03]">TECHINCEPTO</span>?
+              Why Choose <span className="bg-gradient-to-r from-blue-600 to-[#ff4a03] bg-clip-text text-transparent">TECHINCEPTO</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We are committed to providing quality online IT education in Pakistan that transforms careers and opens new opportunities in the digital world. Our approach combines theoretical knowledge with practical application to ensure you're job-ready.
@@ -336,8 +336,10 @@ export default function Home() {
               }
             ].map((item, index) => (
               <div key={index} className="text-center p-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="h-8 w-8 text-[#ff4a03]" />
+                <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                  index % 2 === 0 ? 'bg-gradient-to-br from-blue-100 to-blue-200' : 'bg-gradient-to-br from-orange-100 to-orange-200'
+                }`}>
+                  <item.icon className={`h-8 w-8 ${index % 2 === 0 ? 'text-blue-600' : 'text-[#ff4a03]'}`} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.desc}</p>
@@ -345,27 +347,27 @@ export default function Home() {
             ))}
           </div>
           
-          <div className="mt-16 bg-gradient-to-r from-orange-50 to-white rounded-2xl p-8">
+          <div className="mt-16 bg-gradient-to-r from-blue-50 via-white to-orange-50 rounded-2xl p-8 border border-blue-100">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Teaching Methodology</h3>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 At TECHINCEPTO, we believe in learning by doing with our online IT courses in Pakistan. Our structured approach ensures that you not only understand concepts but can apply them confidently in real-world situations.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="w-12 h-12 bg-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">1</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold shadow-lg">1</div>
                 <h4 className="font-semibold text-gray-900 mb-2">Learn</h4>
                 <p className="text-sm text-gray-600">Comprehensive theoretical foundation with industry best practices</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">2</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-[#ff4a03] to-[#ff6b35] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold shadow-lg">2</div>
                 <h4 className="font-semibold text-gray-900 mb-2">Practice</h4>
                 <p className="text-sm text-gray-600">Hands-on exercises and real-world projects to reinforce learning</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold">3</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-[#ff4a03] text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl font-bold shadow-lg">3</div>
                 <h4 className="font-semibold text-gray-900 mb-2">Apply</h4>
                 <p className="text-sm text-gray-600">Build portfolio projects and start your professional journey</p>
               </div>
@@ -375,18 +377,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#ff4a03] to-[#ff6b35]">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-[#ff4a03] to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Learning Journey?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Join TECHINCEPTO today and gain the digital skills you need to succeed with our online IT courses in Pakistan. 
+          <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+            Join TECHINCEPTO today and gain the digital skills you need to succeed with our online IT courses in Pakistan.
             Start your journey in computer courses, digital marketing, and web development. Limited seats available - only 25 students per class.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-white text-[#ff4a03] hover:bg-gray-100"
+          <Button
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
             onClick={handleEnrollClick}
           >
             Enroll Now - WhatsApp Us

@@ -81,10 +81,10 @@ Please provide me with more information about the admission process and availabl
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-orange-50 to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-white to-orange-50">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Get in <span className="text-[#ff4a03]">Touch</span>
+            Get in <span className="bg-gradient-to-r from-blue-600 to-[#ff4a03] bg-clip-text text-transparent">Touch</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Ready to start your learning journey with online IT courses in Pakistan? We're here to help you choose the right course 
@@ -102,7 +102,7 @@ Please provide me with more information about the admission process and availabl
               <Card className="border-0 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl text-gray-900 flex items-center">
-                    <MessageCircle className="h-6 w-6 text-[#ff4a03] mr-3" />
+                    <MessageCircle className="h-6 w-6 text-blue-600 mr-3" />
                     Send us a Message
                   </CardTitle>
                   <p className="text-gray-600">
@@ -248,8 +248,10 @@ Please provide me with more information about the admission process and availabl
                   >
                     <CardContent className="pt-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <contact.icon className="h-6 w-6 text-[#ff4a03]" />
+                        <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                          index % 2 === 0 ? 'bg-gradient-to-br from-blue-100 to-blue-200' : 'bg-gradient-to-br from-orange-100 to-orange-200'
+                        }`}>
+                          <contact.icon className={`h-6 w-6 ${index % 2 === 0 ? 'text-blue-600' : 'text-[#ff4a03]'}`} />
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold text-gray-900 mb-1">{contact.title}</h3>
@@ -263,17 +265,17 @@ Please provide me with more information about the admission process and availabl
               </div>
 
               {/* Quick Contact */}
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-[#ff4a03] to-[#ff6b35] text-white">
+              <Card className="border-0 shadow-lg bg-gradient-to-r from-blue-600 to-[#ff4a03] text-white">
                 <CardHeader>
                   <CardTitle className="text-white">Need Immediate Help?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-orange-100 mb-4">
-                    For immediate assistance with our online IT courses selection, admission process, or any urgent queries, 
+                  <p className="text-blue-50 mb-4">
+                    For immediate assistance with our online IT courses selection, admission process, or any urgent queries,
                     contact us directly on WhatsApp.
                   </p>
-                  <Button 
-                    className="w-full bg-white text-[#ff4a03] hover:bg-gray-100"
+                  <Button
+                    className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
                     onClick={handleEnrollClick}
                   >
                     <Phone className="h-4 w-4 mr-2" />
@@ -287,11 +289,11 @@ Please provide me with more information about the admission process and availabl
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Frequently Asked <span className="text-[#ff4a03]">Questions</span>
+              Frequently Asked <span className="bg-gradient-to-r from-[#ff4a03] to-blue-600 bg-clip-text text-transparent">Questions</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Here are some common questions about our online IT courses in Pakistan and admission process.

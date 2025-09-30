@@ -45,10 +45,10 @@ export default function AboutPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-orange-50 to-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-white to-orange-50">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            About <span className="text-[#ff4a03]">TECHINCEPTO</span>
+            About <span className="bg-gradient-to-r from-blue-600 to-[#ff4a03] bg-clip-text text-transparent">TECHINCEPTO</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             We are a new and dedicated IT training institute committed to empowering individuals with 
@@ -96,13 +96,13 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission & Vision */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-[#ff4a03]" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="h-8 w-8 text-blue-600" />
                 </div>
                 <CardTitle className="text-2xl text-gray-900">Our Mission</CardTitle>
               </CardHeader>
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="h-8 w-8 text-[#ff4a03]" />
                 </div>
                 <CardTitle className="text-2xl text-gray-900">Our Vision</CardTitle>
@@ -141,7 +141,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Our <span className="text-[#ff4a03]">Core Values</span>
+              Our <span className="bg-gradient-to-r from-[#ff4a03] to-blue-600 bg-clip-text text-transparent">Core Values</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               These values guide everything we do and shape the learning experience we provide to our students.
@@ -183,8 +183,10 @@ export default function AboutPage() {
             ].map((value, index) => (
               <Card key={index} className="text-center border-0 shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="pt-8">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="h-8 w-8 text-[#ff4a03]" />
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                    index % 2 === 0 ? 'bg-gradient-to-br from-blue-100 to-blue-200' : 'bg-gradient-to-br from-orange-100 to-orange-200'
+                  }`}>
+                    <value.icon className={`h-8 w-8 ${index % 2 === 0 ? 'text-blue-600' : 'text-[#ff4a03]'}`} />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -196,11 +198,11 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Why Choose <span className="text-[#ff4a03]">TECHINCEPTO</span>?
+              Why Choose <span className="bg-gradient-to-r from-blue-600 to-[#ff4a03] bg-clip-text text-transparent">TECHINCEPTO</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We offer more than just courses - we provide a complete learning experience designed 
@@ -256,7 +258,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Our Commitment to <span className="text-[#ff4a03]">Your Success</span>
+              Our Commitment to <span className="bg-gradient-to-r from-[#ff4a03] to-blue-600 bg-clip-text text-transparent">Your Success</span>
             </h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
@@ -280,19 +282,19 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#ff4a03] to-[#ff6b35]">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-[#ff4a03] to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Learning Journey?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Join TECHINCEPTO today and take the first step towards a successful career in IT. 
+          <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+            Join TECHINCEPTO today and take the first step towards a successful career in IT.
             Our team is here to guide you every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-[#ff4a03] hover:bg-gray-100"
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
               onClick={handleEnrollClick}
             >
               Contact Us on WhatsApp

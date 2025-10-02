@@ -156,8 +156,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Transform your career with practical online IT courses in Pakistan designed for today's digital world. 
-                Learn computer courses online, digital marketing, web development, and freelancing skills from industry professionals.
+                Learn digital skills that pay. From MS Office to Web Development, TECHINCEPTO helps you master IT courses online in Pakistan – with hands-on training, small class sizes, and career-focused mentorship.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -308,7 +307,7 @@ export default function Home() {
               Why Choose <span className="bg-gradient-to-r from-blue-600 to-[#ff4a03] bg-clip-text text-transparent">TECHINCEPTO</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We are committed to providing quality online IT education in Pakistan that transforms careers and opens new opportunities in the digital world. Our approach combines theoretical knowledge with practical application to ensure you're job-ready.
+              At TECHINCEPTO, we don’t just teach skills – we prepare you for real jobs. With practical projects, one-on-one guidance, and freelancing mentorship, you’ll graduate with a portfolio that gets clients and employers.
             </p>
           </div>
           
@@ -383,8 +382,8 @@ export default function Home() {
             Ready to Start Your Learning Journey?
           </h2>
           <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
-            Join TECHINCEPTO today and gain the digital skills you need to succeed with our online IT courses in Pakistan.
-            Start your journey in computer courses, digital marketing, and web development. Limited seats available - only 25 students per class.
+            Your Future in IT Starts Here. Limited seats (25 per batch).
+            Don’t wait – reserve your spot today and start learning skills that pay!
           </p>
           <Button
             size="lg"

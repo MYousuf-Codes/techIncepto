@@ -325,7 +325,7 @@ export default function AboutPage() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 TECHINCEPTO. All rights reserved.</p>
+            <p>© 2025 TECHINCEPTO. All rights reserved.</p>
           </div>
         </div>
       </footer>

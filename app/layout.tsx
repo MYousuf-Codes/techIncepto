@@ -60,6 +60,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://techincepto.com" />
         <meta name="theme-color" content="#FF6B35" />
+        <meta name="google-site-verification" content="omOAG_rqEx0udERwi6p4eZj6srcoMXKCL0Unea6Que0" />
       </head>
       <body className={inter.className}>
         {children}

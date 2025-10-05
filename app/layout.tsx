@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import dynamic from 'next/dynamic';
-import { MobileMenu } from '@/components/MobileMenu';
+
 
 // Lazy load components that are not immediately needed
 const LazyMobileMenu = dynamic(() => import('@/components/MobileMenu').then(mod => ({ default: mod.MobileMenu })), {
@@ -63,7 +63,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="omOAG_rqEx0udERwi6p4eZj6srcoMXKCL0Unea6Que0" />
       </head>
       <body className={inter.className}>
-        {children}
+          {children}
         <LazyMobileMenu />
       </body>
     </html>

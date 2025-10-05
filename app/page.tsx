@@ -5,101 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { SocialLinks } from "@/components/SocialLinks";
 import { LazyImage } from "@/components/LazyImage";
-import { Code as Code2, Palette, TrendingUp, Video, FileText, Briefcase, Users, Award, Clock, ArrowRight, Play, CircleCheck as CheckCircle } from 'lucide-react';
+import Header from "@/components/Header";
+import { Code as Code2, Briefcase, Users, Award, Clock, ArrowRight, Play, CircleCheck as CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-
-const courses = [
-  {
-    id: 1,
-    title: "MS Office Mastery",
-    price: 5000,
-    duration: "2 months",
-    level: "Beginner",
-    icon: FileText,
-    description: "Master Microsoft Office suite for professional productivity and career advancement.",
-    highlights: [
-      "Professional document formatting",
-      "Advanced Excel formulas & pivot tables", 
-      "Dynamic PowerPoint presentations",
-      "Email management with Outlook"
-    ]
-  },
-  {
-    id: 2,
-    title: "Digital Marketing & Social Media",
-    price: 6000,
-    duration: "2 months", 
-    level: "Intermediate",
-    icon: TrendingUp,
-    description: "Build your brand online and master digital marketing strategies that convert.",
-    highlights: [
-      "SEO optimization techniques",
-      "Social media advertising", 
-      "Content marketing strategies",
-      "Email campaign management"
-    ]
-  },
-  {
-    id: 3,
-    title: "Video Editing & Content Creation",
-    price: 6000,
-    duration: "2 months",
-    level: "Intermediate", 
-    icon: Video,
-    description: "Create stunning videos and content that engages audiences across platforms.",
-    highlights: [
-      "Professional video editing",
-      "Audio synchronization",
-      "Color grading techniques", 
-      "Content strategy"
-    ]
-  },
-  {
-    id: 4,
-    title: "Graphic Designing",
-    price: 7000,
-    duration: "2.5 months",
-    level: "Beginner",
-    icon: Palette,
-    description: "Master visual design principles and create stunning graphics for any purpose.",
-    highlights: [
-      "Design fundamentals",
-      "Professional photo editing",
-      "Logo & brand design",
-      "Social media graphics"
-    ]
-  },
-  {
-    id: 5,
-    title: "Web Development",
-    price: 9000,
-    duration: "3 months",
-    level: "Intermediate",
-    icon: Code2,
-    description: "Build responsive, modern websites using the latest web technologies.",
-    highlights: [
-      "Modern web technologies",
-      "Responsive design", 
-      "JavaScript fundamentals",
-      "Content management systems"
-    ]
-  },
-  {
-    id: 6,
-    title: "Freelancing Skills",
-    price: 3000,
-    duration: "1 month",
-    level: "Beginner", 
-    icon: Briefcase,
-    description: "Start your freelancing career with proven strategies and platform mastery.",
-    highlights: [
-      "Profile optimization",
-      "Winning proposals",
-      "Client management", 
-      "Payment systems"
-    ]
-  }
-];
+import { courses } from "@/data/courses";
 
 const handleEnrollClick = () => {
   const message = "Hi! I'm interested in enrolling in TECHINCEPTO courses. Can you please provide me with more information about the admission process and available batches?";
@@ -110,33 +19,7 @@ const handleEnrollClick = () => {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#ff4a03] to-[#ff6b35] rounded-lg flex items-center justify-center">
-                <Code2 className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#ff4a03] to-[#ff6b35] bg-clip-text text-transparent">
-                TECHINCEPTO
-              </span>
-            </Link>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">Home</Link>
-              <Link href="/courses" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">Courses</Link>
-              <Link href="/about" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">About</Link> 
-              <Link href="/contact" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">Contact</Link>
-              <Button 
-                className="bg-[#ff4a03] hover:bg-[#e63e02] text-white"
-                onClick={handleEnrollClick}
-              >
-                Enroll Now
-              </Button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-white to-orange-50">

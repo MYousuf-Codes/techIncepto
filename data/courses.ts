@@ -1,5 +1,4 @@
-import { Code as Code2, Palette, TrendingUp, Video, FileText, Briefcase, Users, Award, Clock, ArrowRight, Play, CircleCheck as CheckCircle } from 'lucide-react';
-
+import { Code as Code2, Palette, TrendingUp, Video, FileText, Briefcase} from 'lucide-react';
 
 export const courses = [
   {

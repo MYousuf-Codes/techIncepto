@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/SocialLinks";
+import Header from "@/components/Header";
 import { Code as Code2 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -15,32 +16,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#ff4a03] to-[#ff6b35] rounded-lg flex items-center justify-center">
-                <Code2 className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#ff4a03] to-[#ff6b35] bg-clip-text text-transparent">
-                TECHINCEPTO
-              </span>
-            </Link>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">Home</Link>
-              <Link href="/courses" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">Courses</Link>
-              <Link href="/about" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">About</Link> 
-              <Link href="/contact" className="text-gray-700 hover:text-[#ff4a03] transition-colors font-medium">Contact</Link>
-              <Button 
-                className="bg-[#ff4a03] hover:bg-[#e63e02] text-white"
-                onClick={handleEnrollClick}
-              >
-                Enroll Now
-              </Button>
-            </nav>
-          </div>
-        </div>
-      </header>
+            <Header />
 
       {/* Content */}
       <div className="pt-24 pb-16">

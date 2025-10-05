@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          <p className="text-gray-600 mb-8">Last updated: January 2024</p>
+          <p className="text-gray-600 mb-8">Last updated: October 2025</p>
           
           <div className="prose prose-lg max-w-none">
             <div className="space-y-8">
@@ -208,7 +208,7 @@ export default function TermsOfServicePage() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 TECHINCEPTO. All rights reserved.</p>
+            <p>© 2025 TECHINCEPTO. All rights reserved.</p>
           </div>
         </div>
       </footer>
